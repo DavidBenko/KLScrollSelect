@@ -82,6 +82,11 @@
 -(void) synchronizeColumnsForMainDriver {
     [self synchronizeContentOffsetsWithDriver: self.driver];
 }
+
+-(void)reloadData{
+    [self populateColumns];
+}
+
 -(void) populateColumns {
     
     for(KLScrollingColumn *column in self.columns){
